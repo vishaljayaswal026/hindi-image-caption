@@ -1,0 +1,6 @@
+﻿Criterion,Total_Captions,Complete_Captions,Excluded_Captions,Observed_Agreement,Expected_Agreement,Fleiss_Kappa,Status
+Visual_Relevance,500,500,0,0.911333,0.420846,0.846903,Calculated
+Semantic_Adequacy,500,500,0,0.902667,0.417860,0.832801,Calculated
+Grammaticality,500,500,0,0.911333,0.413357,0.848857,Calculated
+Fluency,500,500,0,0.906000,0.411046,0.840395,Calculated
+Factual_Consistency,500,500,0,0.911333,0.411176,0.849417,Calculated
