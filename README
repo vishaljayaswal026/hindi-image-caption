@@ -1,1 +1,60 @@
-dataset link: ABC
+# HindiFlickr30K — IAA and Morphological Tagger
+
+This repository contains inter-annotator agreement analysis and Hindi morphological tagging resources for HindiFlickr30K.
+
+## Contents
+
+- `FleissKappa_Calculation.ipynb` — computes Fleiss’ kappa from three annotator rating sheets.
+- `HindiFlickr30K_IAA_Annotator1.xlsx`
+- `HindiFlickr30K_IAA_Annotator2.xlsx`
+- `HindiFlickr30K_IAA_Annotator3.xlsx`
+- `kappa_results.csv` — final agreement results.
+- `Morphological_Tagger.ipynb` — trains and evaluates the Hindi morphological tagger.
+- `MORPH_TAGGER_REPORT_UD_ONLY.md` — tagger evaluation report.
+- `LICENSE.md` — licensing information.
+
+## Annotation Agreement
+
+Three annotators rated 500 captions on five criteria using a 1–3 scale:
+
+- Visual_Relevance
+- Semantic_Adequacy
+- Grammaticality
+- Fluency
+- Factual_Consistency
+
+All 500 records were complete and used in the final calculation.
+
+| Criterion | Fleiss’ kappa |
+|---|---:|
+| Visual_Relevance | 0.8469 |
+| Semantic_Adequacy | 0.8328 |
+| Grammaticality | 0.8489 |
+| Fluency | 0.8404 |
+| Factual_Consistency | 0.8494 |
+
+Fleiss’ kappa treats the 1–3 ratings as nominal categories. Ordinal agreement statistics may be reported as a complementary analysis.
+
+## Morphological Tagger
+
+The tagger uses `google/muril-base-cased` and is trained on UD Hindi HDTB. It predicts:
+
+- UPOS
+- Gender
+- Number
+- Case
+
+It also produces a 128-dimensional morphology embedding. No gold tags are used at inference time.
+
+| Task | Accuracy |
+|---|---:|
+| UPOS | 0.7869 |
+| Gender | 0.9559 |
+| Number | 0.9596 |
+| Case | 0.7428 |
+
+## License
+
+The Hindi captions and annotation ratings are released under CC BY-NC 4.0.  
+The source code is released under the MIT License.  
+The original Flickr30K images are not redistributed.
